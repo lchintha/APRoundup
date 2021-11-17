@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="7dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_19_cases"
+                style="@style/TitleStyle"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    style="@style/ThemeCovidCasesCount"
+                    android:textStyle="normal"
+                    android:text="@string/active"
+                    android:textSize="15sp"
+                    android:textAlignment="center"/>
+                <TextView
+                    style="@style/ThemeCovidCasesCount"
+                    android:textStyle="normal"
+                    android:text="@string/deceased"
+                    android:textSize="15sp"
+                    android:textAlignment="center"/>
+                <TextView
+                    style="@style/ThemeCovidCasesCount"
+                    android:textStyle="normal"
+                    android:text="@string/recovered"
+                    android:textSize="15sp"
+                    android:textAlignment="center"/>
+                <TextView
+                    style="@style/ThemeCovidCasesCount"
+                    android:textStyle="normal"
+                    android:text="@string/confirmed"
+                    android:textSize="15sp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="2dp"
+                android:layout_margin="2dp"
+                android:id="@+id/india_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_india"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:tint="@color/colorPrimary"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/active"
+                        android:textColor="@color/deepSaffron"
+                        android:text="@string/no_text"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/deceased"
+                        android:textColor="@color/maximumRed"
+                        android:text="@string/no_text"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/recovered"
+                        android:textColor="@color/indiaGreen"
+                        android:text="@string/no_text"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/total"
+                        android:textColor="@color/black"
+                        android:text="@string/no_text"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="2dp"
+                android:layout_margin="2dp"
+                android:id="@+id/ap_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_ap"
+                        android:layout_gravity="center"
+                        android:tint="@color/colorPrimary"
+                        android:scaleType="fitXY"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/ap_active"
+                        android:textColor="@color/deepSaffron"
+                        android:text="@string/no_text"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/ap_deceased"
+                        android:textColor="@color/maximumRed"
+                        android:text="@string/no_text"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/ap_recovered"
+                        android:textColor="@color/indiaGreen"
+                        android:text="@string/no_text"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/ap_total"
+                        android:textColor="@color/black"
+                        android:text="@string/no_text"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="2dp"
+                android:layout_margin="2dp"
+                android:id="@+id/tg_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_telangana"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:tint="@color/colorPrimary"
+                        android:padding="5dp"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/tg_active"
+                        android:textColor="@color/deepSaffron"
+                        android:text="@string/no_text"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/tg_deceased"
+                        android:textColor="@color/maximumRed"
+                        android:text="@string/no_text"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/tg_recovered"
+                        android:textColor="@color/indiaGreen"
+                        android:text="@string/no_text"/>
+                    <TextView
+                        style="@style/ThemeCovidCasesCount"
+                        android:id="@+id/tg_total"
+                        android:textColor="@color/black"
+                        android:text="@string/no_text"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/important_links"
+                style="@style/TitleStyle"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="2dp"
+                android:layout_margin="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/covid_global_cases"
+                        style="@style/TitleStyle"
+                        android:textStyle="normal"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textColor="@color/honoluluBlue"
+                        android:paddingBottom="5dp"
+                        android:layout_marginStart="5dp"
+                        android:id="@+id/globalCases"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/covid_risk_scan"
+                        style="@style/TitleStyle"
+                        android:textStyle="normal"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="5dp"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/risk_scan_link"
+                        android:textStyle="normal"
+                        android:textColor="@color/honoluluBlue"
+                        android:paddingBottom="5dp"
+                        android:layout_marginStart="5dp"
+                        android:id="@+id/riskScanner"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cases_source"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:textSize="12sp"
+                android:textIsSelectable="true"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

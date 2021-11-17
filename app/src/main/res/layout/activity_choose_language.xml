@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.settings.ChooseLanguageActivity"
+    android:background="@color/activityBackground">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_preffered_language"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="18sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp" />
+
+    <RadioGroup
+        android:id="@+id/languageGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/englishLanguage"
+            android:padding="8dp"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/english"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="16sp"
+            android:button="@drawable/change_lang_selection"
+            android:background="@drawable/change_lang_selection"/>
+
+        <RadioButton
+            android:id="@+id/teluguLanguage"
+            android:padding="8dp"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/telugu"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="16sp"
+            android:button="@drawable/change_lang_selection"
+            android:background="@drawable/change_lang_selection"/>
+
+    </RadioGroup>
+
+    <Button
+        android:onClick="goToLaunchScreen"
+        android:id="@+id/continueBtn"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="@string/btn_save"
+        android:textAllCaps="false"
+        android:layout_gravity="end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_unselected_bg"
+        android:enabled="false"
+        android:textSize="18sp"/>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/constituencyWiseResults"
+        android:title="@string/constituency_wise_results"
+        app:showAsAction="never"/>
+
+    <!--<item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom"a
+        android:title="" />-->
+
+</menu>

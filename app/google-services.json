@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "49411834119",
+    "firebase_url": "https://ap-roundup-290e4.firebaseio.com",
+    "project_id": "ap-roundup-290e4",
+    "storage_bucket": "ap-roundup-290e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49411834119:android:68e88396546bd915cb45a2",
+        "android_client_info": {
+          "package_name": "com.vrcmicrotech.aproundup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49411834119-5nivij3c81uf96tc25et0dc7iscnvkuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYZv77piYYrtI6BUQwhV729dDWfCx0mSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49411834119-5nivij3c81uf96tc25et0dc7iscnvkuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activities.mla.AssemblyConstituencyResultsActivity">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                style="@style/mlaInfoStyle"
+                android:text="@string/total_voters"
+                android:id="@+id/totalVotersTag"/>
+
+            <TextView
+                style="@style/mlaInfoStyle"
+                android:text="@string/sample_total_voters"
+                android:id="@+id/totalVoters"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_below="@id/totalVoters"
+                style="@style/mlaInfoStyle"
+                android:text="@string/male_voters"
+                android:id="@+id/maleVotersTag"/>
+
+            <TextView
+                android:layout_below="@id/totalVoters"
+                style="@style/mlaInfoStyle"
+                android:text="@string/sample_male_voters"
+                android:textStyle="bold"
+                android:id="@+id/maleVoters"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_below="@id/maleVoters"
+                style="@style/mlaInfoStyle"
+                android:text="@string/female_voters"
+                android:id="@+id/femaleVotersTag"/>
+
+            <TextView
+                android:layout_below="@id/maleVoters"
+                style="@style/mlaInfoStyle"
+                android:text="@string/sample_female_voters"
+                android:textStyle="bold"
+                android:id="@+id/femaleVoters"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_below="@id/femaleVoters"
+                style="@style/mlaInfoStyle"
+                android:text="@string/third_genders"
+                android:id="@+id/thirdGendersTag"/>
+
+            <TextView
+                android:layout_below="@id/femaleVoters"
+                style="@style/mlaInfoStyle"
+                android:text="@string/sample_third_gender"
+                android:textStyle="bold"
+                android:id="@+id/thirdGenders"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_below="@id/thirdGenders"
+                style="@style/mlaInfoStyle"
+                android:text="@string/votes_polled"
+                android:id="@+id/votesPolledTag"/>
+
+            <TextView
+                android:layout_below="@id/thirdGenders"
+                style="@style/mlaInfoStyle"
+                android:text="@string/sample_votes_polled"
+                android:textStyle="bold"
+                android:id="@+id/votesPolled"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_below="@id/votesPolled"
+                style="@style/mlaInfoStyle"
+                android:text="@string/polling_percentage"
+                android:id="@+id/pollingPercentageTag"/>
+
+            <TextView
+                android:layout_below="@id/votesPolled"
+                style="@style/mlaInfoStyle"
+                android:text="@string/sample_polling_percentage"
+                android:textStyle="bold"
+                android:id="@+id/pollingPercentage"
+                android:layout_alignParentEnd="true"/>
+            
+        </RelativeLayout>
+        
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/candidatesList"
+        android:padding="10dp"/>
+
+</LinearLayout>

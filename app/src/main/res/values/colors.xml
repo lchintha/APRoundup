@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="iconBackgroundColor">#17DECB</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="darkGray">#A9A9A9</color>
+
+    <color name="activityBackground">#F4F6F9</color>
+    
+    <color name="honoluluBlue">#0266B4</color>
+    <color name="philippineGreen">#008E46</color>
+    
+    <color name="tdpFlagCenterColor">#FFFF00</color>
+    <color name="tdpFlagStartColor">#FFF176</color>
+    <color name="tdpFlagEndColor">#FFEB3B</color>
+    
+    <color name="maximumRed">#DA2824</color>
+    
+    <color name="deepSaffron">#FF9933</color>
+    <color name="indiaGreen">#138808</color>
+    
+    <color name="forestGreen">#278D27</color>
+    <color name="tennesseUniversityOrange">#F97D09</color>
+
+    <color name="indColorOne">#757575</color>
+    <color name="indColorTwo">#EEEEEE</color>
+    <color name="indColorThree">#BDBDBD</color>
+
+    <color name="hyperlink">#008577</color>
+
+</resources>

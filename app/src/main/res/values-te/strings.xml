@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">AP Roundup</string>
+    <string name="about_us">మా గురించి</string>
+    <string name="age">వయస్సు</string>
+    <string name="ap_ministers">ఎపి మంత్రులు</string>
+    <string name="assembly_election_results">2019 అసెంబ్లీ ఎన్నికల ఫలితాలు</string>
+    <string name="assembly_results">అసెంబ్లీ ఫలితాలు</string>
+    <string name="bjp">బిజెపి</string>
+    <string name="bjp_mp_seats">0</string>
+    <string name="bjp_plmnt_vote_percentage">0.96</string>
+    <string name="bjp_seats">0</string>
+    <string name="bjp_vote_percentage">0.84</string>
+    <string name="chief_minister">ముఖ్యమంత్రి</string>
+    <string name="confirm_close_app">"మీరు అప్లికేషన్‌ను మూసివేయడానికి ప్రయత్నిస్తున్నారా? "</string>
+    <string name="constituency">నియోజకవర్గం</string>
+    <string name="constituency_wise_results">నియోజకవర్గాల వారీగా ఫలితాలు</string>
+    <string name="contact_us">మమ్మల్ని సంప్రదించండి</string>
+    <string name="contact_us_descritpion">మీకు ఏవైనా ప్రశ్నలు లేదా సూచనలు ఉంటే దయచేసి మాకు  vrcmicrotech@gmail.com వద్ద ఇమెయిల్ చేయండి.</string>
+    <string name="district">జిల్లా</string>
+    <string name="district_wise_results">జిల్లాల వారీగా ఫలితాలు</string>
+    <string name="districts">జిల్లాలు</string>
+    <string name="female_voters">మహిళా ఓటర్లు</string>
+    <string name="inc">కాంగ్రెస్</string>
+    <string name="inc_mp_seats">0</string>
+    <string name="inc_plmnt_vote_percentage">1.29</string>
+    <string name="inc_seats">0</string>
+    <string name="inc_vote_percentage">1.17</string>
+    <string name="jsp">జనసేన</string>
+    <string name="jsp_mp_seats">0</string>
+    <string name="jsp_plmnt_vote_percentage">7.03</string>
+    <string name="jsp_seats">1</string>
+    <string name="jsp_vote_percentage">6.79</string>
+    <string name="loading">లోడింగ్…</string>
+    <string name="majority">మెజారిటీ</string>
+    <string name="male_voters">మగ ఓటర్లు</string>
+    <string name="navigation_drawer_close">క్లోజ్</string>
+    <string name="navigation_drawer_open">ఓపెన్</string>
+    <string name="no">కాదు</string>
+    <string name="no_mlas">ఎమ్మెల్యేలు లేరు.</string>
+    <string name="no_mps">ఎంపీలు లేరు.</string>
+    <string name="our_policy">మా విధానం</string>
+    <string name="parliament_constituencies">పార్లమెంట్ నియోజకవర్గాలు</string>
+    <string name="parliament_election_results">2019 పార్లమెంట్ ఎన్నికల ఫలితాలు</string>
+    <string name="parliament_results">పార్లమెంట్ ఫలితాలు</string>
+    <string name="party_code">పార్టీ కోడ్</string>
+    <string name="polling_percentage">పోలింగ్</string>
+    <string name="qualification">అర్హతలు</string>
+    <string name="rate_us">మాకు రేట్ చేయండి</string>
+
+    <string name="sample_age">55</string>
+    <string name="sample_constituency">పలాస</string>
+    <string name="sample_district">శ్రీకాకుళం</string>
+    <string name="sample_female_voters">110,200</string>
+    <string name="sample_majority">12,500</string>
+    <string name="sample_male_voters">110,180</string>
+    <string name="sample_name">నమూనా పేరు</string>
+    <string name="sample_polling_percentage">85</string>
+    <string name="sample_portfolio">విదేశాంగ మంత్రి</string>
+    <string name="sample_qualification">బి. టెక్</string>
+    <string name="sample_third_gender">20</string>
+    <string name="sample_total_voters">250,000</string>
+    <string name="sample_total_votes">89,453</string>
+    <string name="sample_vote_share">51.35</string>
+    <string name="sample_votes_polled">220,400</string>
+    <string name="sample_date">10/05/2020</string>
+
+    <string name="seats_won">గెలిచిన స్థానాలు</string>
+    <string name="symbol">చిహ్నం</string>
+    <string name="tdp">టిడిపి</string>
+    <string name="tdp_mp_seats">3</string>
+    <string name="tdp_plmnt_vote_percentage">39.6</string>
+    <string name="tdp_seats">23</string>
+    <string name="tdp_vote_percentage">39.18</string>
+    <string name="third_genders">మూడవ లింగం</string>
+    <string name="total_voters">మొత్తం ఓటర్లు</string>
+    <string name="total_votes">మొత్తం ఓట్లు</string>
+    <string name="upcoming">తరువాత</string>
+    <string name="vote_percentage">ఓటు %</string>
+    <string name="vote_share">ఓటు వాటా</string>
+    <string name="votes_polled">పోల్ చేసిన ఓట్లు</string>
+    <string name="yes">అవును</string>
+    <string name="ysrcp">వైఎస్ఆర్సిపి</string>
+    <string name="ysrcp_mp_seats">22</string>
+    <string name="ysrcp_plmnt_vote_percentage">49.1</string>
+    <string name="ysrcp_seats">151</string>
+    <string name="ysrcp_vote_percentage">49.95</string>
+    <string name="choose_preffered_language">మీరు ఇష్టపడే భాషను ఎంచుకోండి</string>
+    <string name="btn_continue">కొనసాగించు</string>
+    <string name="btn_save">సేవ్</string>
+    <string name="settings">సెట్టింగులు</string>
+
+    <string-array name="ap_districts">
+        <item>శ్రీకాకుళం</item>
+        <item>విజయనగరం</item>
+        <item>విశాఖపట్నం</item>
+        <item>తూర్పు గోదావరి</item>
+        <item>పశ్చిమ గోదావరి</item>
+        <item>కృష్ణ</item>
+        <item>గుంటూరు</item>
+        <item>ప్రకాశం</item>
+        <item>నెల్లూరు</item>
+        <item>కడప</item>
+        <item>కర్నూలు</item>
+        <item>అనంతపురం</item>
+        <item>చిత్తూరు</item>
+    </string-array>
+
+    <string name="about_us_desc">"AP రౌండప్ ఆంధ్రప్రదేశ్ రాజకీయాలకు విప్లవాత్మక అనువర్తనం. ఈ యాప్‌లో రాష్ట్రంలోని ప్రధాన పార్టీలు మరియు 2019 ఎపి ఎన్నికలలో వారు గెలిచిన ఎమ్మెల్యే మరియు ఎంపి గణాంకాల గురించి తగిన సమాచారం ఉంది. మీరు AP మంత్రుల జాబితాను కూడా చూడవచ్చు.\n\nమెరుగైన సమాజం పొందడానికి రాజకీయాలతో ప్రజలందరినీ నిమగ్నం చేయడమే మా ప్రధాన లక్ష్యం."</string>
+    <string-array name="policies">
+        <item>మేము అభ్యర్థి యొక్క కులం చూపించము.</item>
+        <item>మేము ప్రకటనలను చూపించము.</item>
+        <item>మేము వినియోగదారుని అభిప్రాయానికి విలువ ఇస్తాము.</item>
+    </string-array>
+
+    <string-array name="ap_parliament_constituencies">
+        <item>అమలాపురం</item>
+        <item>అనకాపల్లి</item>
+        <item>అనంతపురం</item>
+        <item>అరకు</item>
+        <item>బాపట్ల</item>
+        <item>చిత్తూర్</item>
+        <item>ఏలూరు</item>
+        <item>గుంటూరు</item>
+        <item>హిందూపూర్</item>
+        <item>కడప</item>
+        <item>కాకినాడ</item>
+        <item>కర్నూల్</item>
+        <item>మచిలీపట్టణం</item>
+        <item>నంద్యాల</item>
+        <item>నరసాపురం</item>
+        <item>నరసరావుపేట</item>
+        <item>నెల్లూరు</item>
+        <item>ఒంగోలు</item>
+        <item>రాజమండ్రి</item>
+        <item>రాజంపేట</item>
+        <item>శ్రీకాకుళం</item>
+        <item>తిరుపతి</item>
+        <item>విజయవాడ</item>
+        <item>విశాఖపట్నం</item>
+        <item>విజియనగరం</item>
+    </string-array>
+
+    <string name="unexpected_error">అనుకోని తప్పు జరిగినది. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.</string>
+    <string name="no_network">నెట్‌వర్క్ లేదు</string>
+    <string name="internet_not_available">మీ నెట్‌వర్క్ అందుబాటులో లేదు. దయచేసి మీ కనెక్షన్‌ను సరిచూసుకోండి.</string>
+    <string name="retry">మళ్ళీ ప్రయత్నించు</string>
+    <string name="ok">ఓకే</string>
+
+    <!-- Covid 19 -->
+    <string name="covid_19">కోవిడ్ -19 వైరస్</string>
+    <string name="active">వ్యాధిగ్రస్థులు</string>
+    <string name="deceased">మరణించిన వారు</string>
+    <string name="recovered">కోలుకున్న వారు</string>
+    <string name="confirmed">మొత్తం</string>
+    <string name="covid_19_cases">కోవిడ్ -19 కేసులు</string>
+    <string name="state_wise_list">రాష్ట్రాల వారీగా కేసులు</string>
+    <string name="ap_district_wise_list">ఆంధ్రప్రదేశ్ కేసులు</string>
+    <string name="tg_district_wise_list">తెలంగాణ కేసులు</string>
+    <string name="recorded_cases">నమోదయిన కేసులు</string>
+    <string name="state">రాష్ట్రం</string>
+    <string name="important_links">ముఖ్యమైన లింకులు</string>
+    <string name="covid_global_cases">కోవిడ్ -19 ప్రపంచవ్యాప్త కేసులు</string>
+    <string name="covid_risk_scan">కోవిడ్ -19 రిస్క్ స్కాన్</string>
+
+    <!-- Terms and Conditions -->
+    <string name="terms_and_conditions">నిబంధనలు మరియు షరతులు</string>
+
+    <!-- News Papers -->
+    <string name="news_papers">వార్తాపత్రికలు</string>
+    <string name="andhrajyothy">ఆంధ్రజ్యోతి</string>
+    <string name="sakshi">సాక్షి</string>
+    <string name="vaartha">వార్త</string>
+    <string name="surya">సూర్య</string>
+    <string name="andhraprabha">ఆంధ్రప్రభ</string>
+    <string name="prajasakti">ప్రజాశక్తి</string>
+    <string name="andhrapradesh">ఆంధ్రప్రదేశ్</string>
+    <string name="hyderabad">హైదరాబాద్</string>
+    <string name="telangana">తెలంగాణ</string>
+    <string name="permission_required">ఇ-పేపర్ చూడటానికి దయచేసి storage అనుమతి ఇవ్వండి.</string>
+    <string name="permission_not_granted">ఇ-పేపర్ చూపించడానికి మాకు storage అనుమతి అవసరం. దయచేసి AP Roundup సెట్టింగ్‌కు వెల్లి అనుమతి ఇవ్వండి.</string>
+
+</resources>

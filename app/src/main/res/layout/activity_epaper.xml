@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.epaper.EpaperActivity"
+    android:background="@color/activityBackground">
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/paper"
+        android:layout_above="@id/navigation"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation"
+        android:id="@+id/progressLayout">
+
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/progress"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:background="@drawable/shape_circle"
+            style="?android:attr/progressBarStyleHorizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="0%"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:id="@+id/percentage"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/navigation"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_navigate_next"
+            android:id="@+id/previous"
+            android:rotation="180"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:tint="@color/white"
+            android:padding="5dp"
+            android:onClick="previousPaper"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pages"
+            android:layout_centerInParent="true"
+            style="@style/TitleStyle"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_navigate_next"
+            android:id="@+id/next"
+            android:layout_marginEnd="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:elevation="10dp"
+            android:tint="@color/white"
+            android:padding="5dp"
+            android:onClick="nextPaper"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,291 @@
+<resources>
+
+    <string name="app_name">AP Roundup</string>
+    <string name="default_font" translatable="false">sans-serif-condensed</string>
+
+    <!-- About Us -->
+    <string name="about_us_desc">AP Roundup is a revolutionary app for the Andhra Pradesh politics. This app is provided with adequate information regarding the main parties in the state and their winning MLA\'s and MP\'s statistics in 2019 AP elections. You can also see the list of ministers. \n\nOur main aim is to engage all the people with politics to get better society. This is just beginning. Our biggest features yet to come. Please support and stay tuned to our application.</string>
+    <string-array name="policies">
+        <item>We don\'t display caste of the candidate.</item>
+        <item>We don\'t display advertisements.</item>
+        <item>We give value to the user\'s feedback.</item>
+    </string-array>
+
+
+    <string name="assembly_election_results">2019 Assembly Election Results</string>
+    <string name="parliament_election_results">2019 Parliament Election Results</string>
+    <string name="assembly_results">Assembly Results</string>
+    <string name="parliament_results">Parliament Results</string>
+    <string name="symbol">Symbol</string>
+    <string name="party_code">Party Code</string>
+    <string name="seats_won">Seats Won</string>
+    <string name="vote_percentage">Vote %</string>
+
+    <!-- Party codes -->
+    <string name="ysrcp">YSRCP</string>
+    <string name="tdp">TDP</string>
+    <string name="jsp">JSP</string>
+    <string name="inc">INC</string>
+    <string name="bjp">BJP</string>
+
+    <!-- Assembly seats -->
+    <string name="ysrcp_seats">151</string>
+    <string name="tdp_seats">23</string>
+    <string name="jsp_seats">1</string>
+    <string name="inc_seats">0</string>
+    <string name="bjp_seats">0</string>
+
+    <!-- Parliament seats -->
+    <string name="ysrcp_mp_seats">22</string>
+    <string name="tdp_mp_seats">3</string>
+    <string name="jsp_mp_seats">0</string>
+    <string name="inc_mp_seats">0</string>
+    <string name="bjp_mp_seats">0</string>
+
+    <!-- Assembly vote percentage -->
+    <string name="ysrcp_vote_percentage">49.95</string>
+    <string name="tdp_vote_percentage">39.18</string>
+    <string name="jsp_vote_percentage">6.79</string>
+    <string name="inc_vote_percentage">1.17</string>
+    <string name="bjp_vote_percentage">0.84</string>
+
+    <!-- Assembly vote percentage -->
+    <string name="ysrcp_plmnt_vote_percentage">49.1</string>
+    <string name="tdp_plmnt_vote_percentage">39.6</string>
+    <string name="jsp_plmnt_vote_percentage">7.03</string>
+    <string name="inc_plmnt_vote_percentage">1.29</string>
+    <string name="bjp_plmnt_vote_percentage">0.96</string>
+
+    <string name="age">Age</string>
+    <string name="qualification">Qualification</string>
+    <string name="majority">Majority</string>
+    <string name="vote_share">Vote Share</string>
+    <string name="total_votes">Total Votes</string>
+    <string name="constituency">Constituency</string>
+    <string name="district">District</string>
+    <string name="total_voters">Total Voters</string>
+    <string name="male_voters">Male Voters</string>
+    <string name="female_voters">Female Voters</string>
+    <string name="third_genders">Third Genders</string>
+    <string name="votes_polled">Votes Polled</string>
+    <string name="polling_percentage">Polling</string>
+
+    <!-- Sample data -->
+    <string name="sample_name">SAMPLE NAME</string>
+    <string name="sample_portfolio">Minister of External Affairs</string>
+    <string name="sample_age">55</string>
+    <string name="sample_qualification">B. Tech</string>
+    <string name="sample_majority">12,500</string>
+    <string name="sample_vote_share">51.35</string>
+    <string name="sample_total_votes">89,453</string>
+    <string name="sample_constituency">Palasa</string>
+    <string name="sample_district">Srikakulam</string>
+    <string name="sample_total_voters">250,000</string>
+    <string name="sample_male_voters">110,180</string>
+    <string name="sample_female_voters">110,200</string>
+    <string name="sample_third_gender">20</string>
+    <string name="sample_votes_polled">220,400</string>
+    <string name="sample_polling_percentage">85</string>
+    <string name="sample_date">10/05/2020</string>
+
+    <!-- AP Districts -->
+    <string-array name="ap_districts">
+        <item>Srikakulam</item>
+        <item>Vizianagaram</item>
+        <item>Visakhapatnam</item>
+        <item>East Godavari</item>
+        <item>West Godavari</item>
+        <item>Krishna</item>
+        <item>Guntur</item>
+        <item>Prakasam</item>
+        <item>Nellore</item>
+        <item>Kadapa</item>
+        <item>Kurnool</item>
+        <item>Anantapur</item>
+        <item>Chittor</item>
+    </string-array>
+
+    <!-- District wise constituencies -->
+    <string-array name="district_constituencies">
+        <item>10</item>
+        <item>9</item>
+        <item>15</item>
+        <item>19</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>12</item>
+        <item>10</item>
+        <item>10</item>
+        <item>14</item>
+        <item>14</item>
+        <item>14</item>
+    </string-array>
+
+    <!-- Dialog messages -->
+    <string name="loading">Loading…</string>
+
+    <!-- Alerts -->
+    <string name="no_mlas">No MLAs to display.</string>
+    <string name="no_mps">No MPs to display.</string>
+
+    <string name="district_wise_results">District Wise Results</string>
+    <string name="constituency_wise_results">Constituency Wise Results</string>
+    <string name="parliament_constituencies">Parliament Constituencies</string>
+    <string name="districts">Districts</string>
+
+    <!-- About Us -->
+    <string name="about_us">About us</string>
+    <string name="our_policy">Our policy</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="upcoming_descritpion" translatable="false">&#8226; Search your constituency. \n&#8226; Our biggest features yet to come.</string>
+    <string name="contact_us">Contact us</string>
+    <string name="contact_us_descritpion">Please email us at <i><u>vrcmicrotech@gmail.com</u></i> if you have any questions or suggestions.</string>
+    <string name="confirm_close_app"><font face="sans-serif-condensed">Are you trying to close the application?</font></string>
+
+    <!-- Rate Us -->
+    <string name="rate_us">Rate us</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+
+    <!-- Navigation drawer -->
+    <string name="navigation_drawer_open">OPEN</string>
+    <string name="navigation_drawer_close">CLOSE</string>
+
+    <!-- Ministers List -->
+    <string name="ap_ministers">AP Ministers</string>
+    <string name="chief_minister">Chief Minister</string>
+
+    <!-- Choose Language Activity -->
+    <string name="choose_preffered_language">Choose Your Preferred Language</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_save">Save</string>
+    <string name="settings">Settings</string>
+
+    <!-- Non translatable strings -->
+    <string name="english" translatable="false">English</string>
+    <string name="telugu" translatable="false">తెలుగు</string>
+    <string name="lang_english" translatable="false">en</string>
+    <string name="lang_telugu" translatable="false">te</string>
+    <string name="nt_ysrcp" translatable="false">YSRCP</string>
+    <string name="nt_tdp" translatable="false">TDP</string>
+    <string name="nt_jsp" translatable="false">JSP</string>
+    <string name="nt_inc" translatable="false">INC</string>
+    <string name="nt_bjp" translatable="false">BJP</string>
+    <string-array name="nt_ap_districts">
+        <item>Srikakulam</item>
+        <item>Vizianagaram</item>
+        <item>Visakhapatnam</item>
+        <item>East Godavari</item>
+        <item>West Godavari</item>
+        <item>Krishna</item>
+        <item>Guntur</item>
+        <item>Prakasam</item>
+        <item>Nellore</item>
+        <item>Kadapa</item>
+        <item>Kurnool</item>
+        <item>Anantapur</item>
+        <item>Chittor</item>
+    </string-array>
+    <string name="nt" translatable="false">\u0c39\u0c32\u0c4b</string>
+
+    <!-- AP Parliament Constituencies -->
+    <string-array name="ap_parliament_constituencies">
+        <item>Amalapuram</item>
+        <item>Anakapalli</item>
+        <item>Anantapur</item>
+        <item>Aruku</item>
+        <item>Bapatla</item>
+        <item>Chittor</item>
+        <item>Eluru</item>
+        <item>Guntur</item>
+        <item>Hindupur</item>
+        <item>Kadapa</item>
+        <item>Kakinada</item>
+        <item>Kurnool</item>
+        <item>Machilipatnam</item>
+        <item>Nandyal</item>
+        <item>Narasapuram</item>
+        <item>Narasaraopet</item>
+        <item>Nellore</item>
+        <item>Ongole</item>
+        <item>Rajahmundry</item>
+        <item>Rajampet</item>
+        <item>Srikakulam</item>
+        <item>Tirupati</item>
+        <item>Vijayawada</item>
+        <item>Visakhapatnam</item>
+        <item>Vizianagaram</item>
+    </string-array>
+
+    <string-array name="nt_ap_parliament_constituencies">
+        <item>Amalapuram</item>
+        <item>Anakapalli</item>
+        <item>Anantapur</item>
+        <item>Aruku</item>
+        <item>Bapatla</item>
+        <item>Chittor</item>
+        <item>Eluru</item>
+        <item>Guntur</item>
+        <item>Hindupur</item>
+        <item>Kadapa</item>
+        <item>Kakinada</item>
+        <item>Kurnool</item>
+        <item>Machilipatnam</item>
+        <item>Nandyal</item>
+        <item>Narasapuram</item>
+        <item>Narasaraopet</item>
+        <item>Nellore</item>
+        <item>Ongole</item>
+        <item>Rajahmundry</item>
+        <item>Rajampet</item>
+        <item>Srikakulam</item>
+        <item>Tirupati</item>
+        <item>Vijayawada</item>
+        <item>Visakhapatnam</item>
+        <item>Vizianagaram</item>
+    </string-array>
+
+    <string name="unexpected_error">An unexpected error occurred. Please try again later.</string>
+    <string name="no_network">No network</string>
+    <string name="internet_not_available">Your network is not available. Please check your connection.</string>
+    <string name="retry">Retry</string>
+    <string name="ok">OK</string>
+
+    <!-- Covid 19 -->
+    <string name="covid_19">Covid-19 Virus</string>
+    <string name="active">Active</string>
+    <string name="deceased">Deceased</string>
+    <string name="recovered">Recovered</string>
+    <string name="confirmed">Total</string>
+    <string name="covid_19_cases">Covid-19 Cases</string>
+    <string name="cases_source" translatable="false">Source: https://www.covid19india.org/</string>
+    <string name="state_wise_list">State Wise Cases</string>
+    <string name="ap_district_wise_list">Andhra Pradesh Cases</string>
+    <string name="tg_district_wise_list">Telangana Cases</string>
+    <string name="recorded_cases">Recorded cases</string>
+    <string name="state">State</string>
+    <string name="no_text" translatable="false">--</string>
+    <string name="important_links">Important Links</string>
+    <string name="covid_global_cases">Covid-19 Global Cases</string>
+    <string name="covid_risk_scan">Covid-19 Risk Scan</string>
+    <string name="risk_scan_link" translatable="false">https://covid.apollo247.com/risk_scan/</string>
+
+    <!-- Terms and Conditions -->
+    <string name="terms_and_conditions">Terms and Conditions</string>
+
+    <!-- News Papers -->
+    <string name="news_papers">News Papers</string>
+    <string name="andhrajyothy">Andhrajyothi</string>
+    <string name="sakshi">Sakshi</string>
+    <string name="vaartha">Vaartha</string>
+    <string name="surya">Surya</string>
+    <string name="andhraprabha">Andhra Prabha</string>
+    <string name="prajasakti">Prajasakti</string>
+    <string name="andhrapradesh">Andhra Pradesh</string>
+    <string name="hyderabad">Hyderabad</string>
+    <string name="telangana">Telangana</string>
+    <string name="permission_required">Please provide storage permission to display the E-Paper.</string>
+    <string name="permission_not_granted">Storage permission allows us to do display E-Paper. Please allow this permission in App Settings.</string>
+
+</resources>

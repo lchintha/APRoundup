@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ministerRibbon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/minister_ribbon"
+            android:elevation="3dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="7dp"
+            android:layout_margin="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/partyFlag"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:src="@drawable/ysrcp_flag"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/candidatePhoto"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_below="@id/partyFlag">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sample_name"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_marginBottom="3dp"/>
+
+                    <!--<TextView
+                        style="@style/mlaInfoStyle"
+                        android:id="@+id/ageTag"
+                        android:layout_below="@+id/name"
+                        android:text="@string/age"/>
+
+                    <TextView
+                        android:id="@+id/age"
+                        style="@style/mlaInfoStyle"
+                        android:text="@string/sample_age"
+                        android:layout_below="@+id/name"
+                        android:layout_alignParentEnd="true"/>
+
+                    <TextView
+                        style="@style/mlaInfoStyle"
+                        android:id="@+id/qualificationTag"
+                        android:layout_below="@+id/ageTag"
+                        android:text="@string/qualification"/>
+
+                    <TextView
+                        android:id="@+id/qualification"
+                        style="@style/mlaInfoStyle"
+                        android:text="@string/sample_qualification"
+                        android:layout_below="@+id/ageTag"
+                        android:layout_alignParentEnd="true"/>-->
+
+                    <TextView
+                        style="@style/mlaInfoStyle"
+                        android:id="@+id/majorityTag"
+                        android:layout_below="@+id/name"
+                        android:text="@string/majority"/>
+
+                    <TextView
+                        android:id="@+id/majority"
+                        style="@style/mlaInfoStyle"
+                        android:text="@string/sample_majority"
+                        android:layout_below="@+id/name"
+                        android:layout_alignParentEnd="true"/>
+
+                    <TextView
+                        style="@style/mlaInfoStyle"
+                        android:id="@+id/constituencyTag"
+                        android:layout_below="@+id/majorityTag"
+                        android:text="@string/constituency"/>
+
+                    <TextView
+                        android:id="@+id/constituency"
+                        style="@style/mlaInfoStyle"
+                        android:text="@string/sample_constituency"
+                        android:layout_toEndOf="@+id/constituencyTag"
+                        android:gravity="end"
+                        android:layout_marginStart="3dp"
+                        android:layout_below="@+id/majorityTag"
+                        android:layout_alignParentEnd="true"/>
+
+                    <TextView
+                        style="@style/mlaInfoStyle"
+                        android:id="@+id/districtTag"
+                        android:layout_below="@+id/constituency"
+                        android:text="@string/district"/>
+
+                    <TextView
+                        android:id="@+id/district"
+                        style="@style/mlaInfoStyle"
+                        android:text="@string/sample_district"
+                        android:layout_toEndOf="@+id/districtTag"
+                        android:gravity="end"
+                        android:layout_marginStart="3dp"
+                        android:layout_below="@+id/constituency"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>

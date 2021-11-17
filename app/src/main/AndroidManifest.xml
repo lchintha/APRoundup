@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.vrctech.aproundup">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true">
+
+        <receiver android:name=".NotificationReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activities.BaseActivity" />
+        <activity
+            android:name=".activities.LaunchActivity"
+            android:theme="@style/AppThemeLaunch.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.mp.ParliamentConstituenciesListActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.mp.PartyWiseMpsListActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.mla.AssemblyConstituenciesListActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.mla.DistrictsListActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.mla.AssemblyConstituencyResultsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.mla.PartyWiseMlasListActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.mp.ParliamentConstituencyResultsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.settings.ChooseLanguageActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.covid19.StateWiseCasesActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.epaper.EpaperActivity"
+            android:theme="@style/Theme.Design.NoActionBar"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+    </application>
+
+</manifest>
