@@ -42,6 +42,7 @@ import java.util.Objects;
 
 /**
  * Launch activity.
+ * This will hold all features fragments.
  */
 public class LaunchActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
