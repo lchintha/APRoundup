@@ -21,7 +21,8 @@
         android:usesCleartextTraffic="true">
 
         <receiver android:name=".NotificationReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND">
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
@@ -32,7 +33,8 @@
         <activity android:name=".activities.BaseActivity" />
         <activity
             android:name=".activities.LaunchActivity"
-            android:theme="@style/AppThemeLaunch.Launcher">
+            android:theme="@style/AppThemeLaunch.Launcher"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
