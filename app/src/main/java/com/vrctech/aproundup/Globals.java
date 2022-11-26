@@ -13,8 +13,8 @@ public class Globals {
     public static String PAPER_KEYS = "https://epaper.andhrajyothy.com/pagemeta/get/";
     public static String EPAPER = "https://cache.epapr.in/%s/%s-combined.pdf";*/
 
-    public static String PAPER_DATES = "https://epaper.sakshi.com/api/volumedates_v3/";
-    public static String PAPER_KEYS = "https://epaper.sakshi.com/pagemeta/get/";
+    public static String PAPER_DATES = "https://epaper.newindianexpress.com/api/volumedates_v3/";
+    public static String PAPER_KEYS = "https://epaper.newindianexpress.com/pagemeta/get/";
     public static String EPAPER = "https://cache.epapr.in/%s/%s-combined.pdf";
 
     public static String CODE_ANDHRAJYOTHI_HYD = "11227";
@@ -38,5 +38,21 @@ public class Globals {
 
     public static String CODE_PRAJASAKTI_AP = "5953";
     public static String CODE_PRAJASAKTI_TS = "9225";
+
+    //Sample URLS
+    //To get dates -> https://epaper.newindianexpress.com/api/volumedates_v3/11227
+    //To get paper keys -> https://epaper.newindianexpress.com/pagemeta/get/3620496
+    //To get paper -> https://cache.epapr.in/3620496/313b0e94-9d18-4b72-aaa9-26cf61b22a2a-combined.pdf
+    //Pass -> 313b0e94-9
+
+    /**
+     * EENADU
+     *
+     * DATA -> https://paperpdfs.in/eenadu/data.json
+     *
+     * HYDERBAD -> https://paperpdfs.in/eenadu/20221126_37/1p.pdf
+     * AP -> https://paperpdfs.in/eenadu/20221125_35/1p.pdf
+     * TELANGANA -> https://paperpdfs.in/eenadu/20221126_34/1p.pdf
+     */
 
 }

@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.vrcmicrotech.aproundup"
-        minSdkVersion 23
-        targetSdkVersion 31
+        minSdkVersion 28
+        targetSdkVersion 33
         versionCode 8
         versionName "1.2.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -31,26 +31,26 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     //testImplementation 'junit:junit:4.12'
     //androidTestImplementation 'com.android.support.test:runner:1.0.2'
     //androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'androidx.core:core:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.core:core:1.9.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     //Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
 
     //Firebase
-    implementation 'com.google.firebase:firebase-core:20.0.2'
-    implementation 'com.google.firebase:firebase-database:20.0.3'
-    implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
 
     //OkHttp Client
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
@@ -59,7 +59,7 @@ dependencies {
     implementation 'com.miguelcatalan:materialsearchview:1.4.0'
 
     //Protobuf
-    implementation 'com.google.protobuf:protobuf-java:3.11.0'
+    implementation 'com.google.protobuf:protobuf-java:3.17.2'
 
     //PDF Viewer
     implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'

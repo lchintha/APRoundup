@@ -113,7 +113,7 @@ public class NotificationReceiver extends BroadcastReceiver {
     }
 
     public void notifyNewsPapersAvailability(Context context, Intent intent, NotificationManager manager, PendingIntent pendingIntent) {
-        RestClient.getAvailableDateForEpaper(Globals.CODE_SAKSHI_HYD, new RestCallback() {
+        RestClient.getAvailableDateForEpaper(Globals.CODE_ANDHRAJYOTHI_HYD, new RestCallback() {
             @Override
             public void result(JSONObject response) {
                 Iterator<String> keys = response.keys();

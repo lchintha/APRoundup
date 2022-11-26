@@ -36,6 +36,7 @@ public class RestClient {
     }
 
     private static Request getRequest(String url){
+        Log.d("SERVICE_REQUEST", url);
         return new Request.Builder()
                 .url(url)
                 .build();

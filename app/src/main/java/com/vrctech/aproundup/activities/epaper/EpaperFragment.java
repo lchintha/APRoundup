@@ -50,7 +50,7 @@ public class EpaperFragment extends Fragment {
 
     private void displayLatestAvailablePapers(){
         NotifyHelper.showLoading(activity);
-        RestClient.getAvailableDateForEpaper(Globals.CODE_SAKSHI_HYD, new RestCallback() {
+        RestClient.getAvailableDateForEpaper(Globals.CODE_ANDHRAJYOTHI_HYD, new RestCallback() {
             @Override
             public void result(JSONObject response) {
                 Log.d("RESPONSE", response.toString());
