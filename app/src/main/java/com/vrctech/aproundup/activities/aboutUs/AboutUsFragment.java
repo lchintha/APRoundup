@@ -33,8 +33,6 @@ public class AboutUsFragment extends Fragment {
 
         init(view);
         displayPolicies();
-        GlobalMethods.setLocale(GlobalMethods.getPreferredLanguage(getActivity()), getActivity(), getActivity().getBaseContext());
-
         termsAndConditionsClickListener();
 
         return view;

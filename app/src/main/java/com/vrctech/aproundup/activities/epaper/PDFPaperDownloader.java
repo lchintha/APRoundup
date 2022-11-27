@@ -47,7 +47,7 @@ public class PDFPaperDownloader extends AsyncTask<String, String, String>{
             URLConnection connection = url.openConnection();
             connection.connect();
 
-            int lenghtOfFile = connection.getContentLength();
+            int lengthOfFile = connection.getContentLength();
 
             InputStream input = new BufferedInputStream(url.openStream(), 8192);
             OutputStream output = new FileOutputStream(pdfFile);
@@ -58,7 +58,7 @@ public class PDFPaperDownloader extends AsyncTask<String, String, String>{
 
             while ((count = input.read(data)) != -1) {
                 total += count;
-                publishProgress("" + (int) ((total * 100) / lenghtOfFile));
+                publishProgress("" + (int) ((total * 100) / lengthOfFile));
                 output.write(data, 0, count);
             }
 

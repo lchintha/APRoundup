@@ -13,16 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.vrctech.aproundup.JSH;
-import com.vrctech.aproundup.NotifyHelper;
 import com.vrctech.aproundup.R;
-import com.vrctech.aproundup.services.RestCallback;
-import com.vrctech.aproundup.services.RestClient;
-
-import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class EditionsBottomSheetDialog extends BottomSheetDialogFragment implements EditionClickImpl{
 
@@ -31,8 +24,6 @@ public class EditionsBottomSheetDialog extends BottomSheetDialogFragment impleme
 
     private TextView paperName;
     private RecyclerView editionsList;
-
-    private Edition paperEdition;
 
     @Nullable
     @Override
@@ -64,47 +55,12 @@ public class EditionsBottomSheetDialog extends BottomSheetDialogFragment impleme
 
     @Override
     public void editionOnClick(Edition edition) {
-        paperEdition = edition;
-        getNecessaryInfoToDisplayPaper();
+        Intent intent = new Intent(getActivity(), EpaperActivity.class);
+        intent.putExtra(EpaperActivity.PAPER_CODE, edition.getId());
+        intent.putExtra(EpaperActivity.PAGES, edition.getPages());
+        intent.putExtra(EpaperActivity.ORIGINAL_DATE, edition.getDate());
+        startActivity(intent);
+        dismiss();
     }
 
-    private void getNecessaryInfoToDisplayPaper(){
-        NotifyHelper.showLoading(getActivity());
-        RestClient.getAvailableDateForEpaper(paperEdition.getId(), new RestCallback() {
-            @Override
-            public void result(JSONObject response) {
-                Iterator<String> keys = response.keys();
-                String latestDate = keys.next();
-                String paperId = JSH.getString(response, latestDate);
-                getEPaperKeys(paperId);
-            }
-        });
-    }
-
-    private void getEPaperKeys(String paperCode){
-        RestClient.getEPaperKeys(paperCode, new RestCallback() {
-            @Override
-            public void result(JSONObject response) {
-                ArrayList<PaperKey> paperKeys = getPaperKeys(response);
-                NotifyHelper.hideLoading();
-                Intent intent = new Intent(getActivity(), EpaperActivity.class);
-                intent.putExtra(EpaperActivity.PAPER_CODE, paperCode);
-                intent.putExtra(EpaperActivity.PAPER_KEYS, paperKeys);
-                startActivity(intent);
-                dismiss();
-            }
-        });
-    }
-
-    private ArrayList<PaperKey> getPaperKeys(JSONObject response){
-        ArrayList<PaperKey> paperKeys = new ArrayList<>();
-        Iterator<String> keys = response.keys();
-        while (keys.hasNext()) {
-            String key = keys.next();
-            JSONObject value = JSH.getJSONObject(response, key);
-            paperKeys.add(new PaperKey(JSH.getString(value, "pagenum"),
-                    JSH.getString(value, "key")));
-        }
-        return paperKeys;
-    }
 }

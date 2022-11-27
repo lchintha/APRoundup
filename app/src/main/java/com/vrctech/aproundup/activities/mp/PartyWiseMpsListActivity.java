@@ -96,9 +96,8 @@ public class PartyWiseMpsListActivity extends BaseActivity {
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        GlobalMethods.setLocale(GlobalMethods.getPreferredLanguage(this), this, getApplicationContext());
         setLayoutManager();
     }
 

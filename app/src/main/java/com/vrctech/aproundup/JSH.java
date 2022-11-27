@@ -4,6 +4,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class JSH {
 
     public static String getString(JSONObject object, String tag){
@@ -55,6 +57,38 @@ public class JSH {
 
     private static boolean getBoolean(JSONObject object, String tag, boolean defaultValue){
         return object.optBoolean(tag, defaultValue);
+    }
+
+    public static ArrayList<String> getListOfStrings(JSONObject object, String tag){
+        ArrayList<String> result = new ArrayList<>();
+        try {
+            if(!object.has(tag)){
+                return result;
+            }
+            JSONArray array =  object.getJSONArray(tag);
+            for(int i=0; i<array.length(); i++){
+                result.add(array.getString(i));
+            }
+            return result;
+        } catch (JSONException e) {
+            return result;
+        }
+    }
+
+    public static ArrayList<Integer> getListOfNumbers(JSONObject object, String tag){
+        ArrayList<Integer> result = new ArrayList<>();
+        try {
+            if(!object.has(tag)){
+                return result;
+            }
+            JSONArray array =  object.getJSONArray(tag);
+            for(int i=0; i<array.length(); i++){
+                result.add(array.getInt(i));
+            }
+            return result;
+        } catch (JSONException e) {
+            return result;
+        }
     }
 
 }
