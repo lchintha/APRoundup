@@ -14,7 +14,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.PDFView;
-import com.vrctech.aproundup.GlobalMethods;
 import com.vrctech.aproundup.Globals;
 import com.vrctech.aproundup.NotifyHelper;
 import com.vrctech.aproundup.R;
@@ -26,10 +25,13 @@ import java.util.Locale;
 public class EpaperActivity extends AppCompatActivity implements PaperLoadImpl{
 
     static String PAPER_CODE = "PAPER_CODE";
-    static String PAPER_KEYS = "PAPER_KEYS";
+    static String PAGES = "PAGES";
+    static String ORIGINAL_DATE = "ORIGINAL_DATE";
 
     private String paperCode;
-    private ArrayList<PaperKey> paperKeys;
+    private ArrayList<String> pageNumbers;
+    private String originalDate;
+
     private int currentPaper = 0;
 
     private PDFView paper;
@@ -55,9 +57,10 @@ public class EpaperActivity extends AppCompatActivity implements PaperLoadImpl{
         }
 
         paperCode = intent.getStringExtra(PAPER_CODE);
-        paperKeys = (ArrayList<PaperKey>) intent.getSerializableExtra(PAPER_KEYS);
-        setPageCount();
+        pageNumbers = (ArrayList<String>) intent.getSerializableExtra(PAGES);
+        originalDate = intent.getStringExtra(ORIGINAL_DATE);
 
+        setPageCount();
         showEPaper();
     }
 
@@ -89,10 +92,14 @@ public class EpaperActivity extends AppCompatActivity implements PaperLoadImpl{
     }
 
     private void downloadPaper(){
-        String key = paperKeys.get(currentPaper).getPageKey();
-        String url = String.format(Globals.EPAPER, paperCode, key);
-        Log.d("URL", url);
-        new PDFPaperDownloader(this).execute(url, key+".pdf");
+        String key = pageNumbers.get(currentPaper);
+        String url = String.format(Globals.EPAPER, originalDate, paperCode, key);
+        Log.d("SERVICE_REQUEST", url);
+        new PDFPaperDownloader(this).execute(url, getPageName());
+    }
+
+    private String getPageName(){
+        return originalDate + "_" + paperCode + "_" + pageNumbers.get(currentPaper) + ".pdf";
     }
 
     @Override
@@ -119,33 +126,27 @@ public class EpaperActivity extends AppCompatActivity implements PaperLoadImpl{
         paper.setMidZoom(3.5f);
         paper.setMaxZoom(7.0f);
         paper.fromFile(getCurrentFilePath())
-                .password(GlobalMethods.getPaperPassword(getCurrentPaperKey()))
                 .load();
         paper.setVisibility(View.VISIBLE);
     }
 
     private File getCurrentFilePath(){
-        String paperKey = getCurrentPaperKey();
         String file = getFilesDir().getAbsolutePath()
                 .concat("/" + PDFPaperDownloader.EPAPER + "/")
-                .concat(paperKey)
+                .concat(getPageName())
                 .concat(".pdf");
         return new File(file);
     }
 
-    private String getCurrentPaperKey(){
-        return paperKeys.get(currentPaper).getPageKey();
-    }
-
     private void setPageCount(){
-        pages.setText(String.format(Locale.ENGLISH, "%d/%d", currentPaper + 1, paperKeys.size()));
+        pages.setText(String.format(Locale.ENGLISH, "%d/%d", currentPaper + 1, pageNumbers.size()));
     }
 
     public void nextPaper(View view){
         if(progressLayout.getVisibility() != View.VISIBLE) {
             previous.setVisibility(View.VISIBLE);
             currentPaper += 1;
-            if (currentPaper == paperKeys.size() - 1) {
+            if (currentPaper == pageNumbers.size() - 1) {
                 view.setVisibility(View.GONE);
             }
             setPageCount();

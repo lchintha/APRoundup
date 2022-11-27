@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.vrctech.aproundup.GlobalMethods;
 import com.vrctech.aproundup.R;
 
 import java.util.ArrayList;
@@ -37,7 +38,7 @@ public class EditionAdapter extends RecyclerView.Adapter<EditionAdapter.EditionH
         Edition edition = editions.get(position);
         holder.icon.setImageResource(edition.getIcon());
         holder.name.setText(edition.getName());
-        holder.date.setText(edition.getDate());
+        holder.date.setText(GlobalMethods.getFormattedDate(edition.getDate()));
 
         holder.view.setOnClickListener(view -> editionClick.editionOnClick(edition));
     }

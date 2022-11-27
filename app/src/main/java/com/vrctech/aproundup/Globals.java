@@ -13,9 +13,12 @@ public class Globals {
     public static String PAPER_KEYS = "https://epaper.andhrajyothy.com/pagemeta/get/";
     public static String EPAPER = "https://cache.epapr.in/%s/%s-combined.pdf";*/
 
-    public static String PAPER_DATES = "https://epaper.newindianexpress.com/api/volumedates_v3/";
-    public static String PAPER_KEYS = "https://epaper.newindianexpress.com/pagemeta/get/";
-    public static String EPAPER = "https://cache.epapr.in/%s/%s-combined.pdf";
+    public static String LATEST_DATE = "https://paperpdfs.in/eenadu/data.json";
+    public static String EPAPER = "https://paperpdfs.in/eenadu/%s_%s/%s.pdf";
+
+    public static String CODE_EENADU_HYD = "37";
+    public static String CODE_EENADU_AP = "35";
+    public static String CODE_EENADU_TS = "34";
 
     public static String CODE_ANDHRAJYOTHI_HYD = "11227";
     public static String CODE_ANDHRAJYOTHI_AP = "12721";

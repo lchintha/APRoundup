@@ -30,8 +30,6 @@ public class WebViewActivity extends BaseActivity {
         setTitle(intent.getIntExtra(TITLE, R.string.app_name));
 
         init();
-        GlobalMethods.setLocale(GlobalMethods.getPreferredLanguage(this), this, getBaseContext());
-
         webView.loadUrl(intent.getStringExtra(URL));
         webView.setWebViewClient(new WebViewClient(){
             @Override
