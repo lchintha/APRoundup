@@ -12,7 +12,7 @@ public class DatabaseInstance {
     private static final DatabaseReference databaseReferenceTelugu = FirebaseDatabase.getInstance().getReference().child("telugu");
 
     public static DatabaseReference getDatabaseReference(Activity context){
-        if(GlobalMethods.getPreferredLanguage(context).equals("te")) {
+        if(GlobalMethods.getPreferredLanguage().equals("te")) {
             Log.d("LANGUAGE", "TELUGU");
             return databaseReferenceTelugu;
         }else{

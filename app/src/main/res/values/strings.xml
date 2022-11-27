@@ -276,6 +276,7 @@
 
     <!-- News Papers -->
     <string name="news_papers">News Papers</string>
+    <string name="eenadu" translatable="false">Eenadu</string>
     <string name="andhrajyothy">Andhrajyothi</string>
     <string name="sakshi">Sakshi</string>
     <string name="vaartha">Vaartha</string>

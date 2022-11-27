@@ -14,8 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.vrctech.aproundup.GlobalMethods;
-import com.vrctech.aproundup.Globals;
+import com.vrctech.aproundup.JSH;
 import com.vrctech.aproundup.NotifyHelper;
 import com.vrctech.aproundup.R;
 import com.vrctech.aproundup.services.RestCallback;
@@ -24,7 +23,7 @@ import com.vrctech.aproundup.services.RestClient;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Collections;
 
 public class EpaperFragment extends Fragment {
 
@@ -37,7 +36,6 @@ public class EpaperFragment extends Fragment {
         View view = inflater.inflate(R.layout.layout_epapers_fragment, container, false);
 
         init(view);
-        GlobalMethods.setLocale(GlobalMethods.getPreferredLanguage(activity), activity, activity.getBaseContext());
         displayLatestAvailablePapers();
 
         return view;
@@ -50,13 +48,16 @@ public class EpaperFragment extends Fragment {
 
     private void displayLatestAvailablePapers(){
         NotifyHelper.showLoading(activity);
-        RestClient.getAvailableDateForEpaper(Globals.CODE_ANDHRAJYOTHI_HYD, new RestCallback() {
+        RestClient.getAvailableDateForEpaper(new RestCallback() {
             @Override
             public void result(JSONObject response) {
                 Log.d("RESPONSE", response.toString());
-                Iterator<String> keys = response.keys();
-                String latestDate = keys.next();
-                ArrayList<Epaper> epapers = NewsPapers.getPapersList(latestDate);
+                JSONObject datesObject = JSH.getJSONObject(response, "34");
+                ArrayList<Integer> dates = JSH.getListOfNumbers(datesObject, "dates");
+                dates.sort(Collections.reverseOrder());
+                String latestDate = dates.get(0).toString();
+                Log.d("LATEST_DATE", latestDate);
+                ArrayList<Epaper> epapers = NewsPapers.getPapersList(latestDate, response);
                 setRecyclerAdapter(epapers);
                 NotifyHelper.hideLoading();
             }
@@ -65,7 +66,7 @@ public class EpaperFragment extends Fragment {
 
     private void setRecyclerAdapter(ArrayList<Epaper> epapers){
         activity.runOnUiThread(() -> {
-            EpaperAdapter adapter = new EpaperAdapter(epapers, activity, getActivity().getSupportFragmentManager());
+            EpaperAdapter adapter = new EpaperAdapter(epapers, activity, requireActivity().getSupportFragmentManager());
             newsPapersList.setAdapter(adapter);
             if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
                 newsPapersList.setLayoutManager(new GridLayoutManager(getActivity(), 2));

@@ -31,7 +31,7 @@ public class ChooseLanguageActivity extends BaseActivity {
         init();
 
         languageGroupSelectionListener();
-        if(GlobalMethods.isLanguageSelected(this)) {
+        if(GlobalMethods.isLanguageSelected()) {
             prepopulateTheSelection();
             Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         }
@@ -50,22 +50,15 @@ public class ChooseLanguageActivity extends BaseActivity {
             if(radioGroup.getCheckedRadioButtonId() == R.id.englishLanguage) {
                 englishLanguage.setTextColor(getResources().getColor(R.color.white, null));
                 teluguLanguage.setTextColor(getResources().getColor(R.color.black, null));
-                GlobalMethods.setLocale(getString(R.string.lang_english), this, getApplicationContext());
             }else if(radioGroup.getCheckedRadioButtonId() == R.id.teluguLanguage){
                 englishLanguage.setTextColor(getResources().getColor(R.color.black, null));
                 teluguLanguage.setTextColor(getResources().getColor(R.color.white, null));
-                GlobalMethods.setLocale(getString(R.string.lang_telugu), this, getApplicationContext());
             }
         });
     }
 
 
     public void goToLaunchScreen(View view) {
-        if(englishLanguage.isChecked()){
-            GlobalMethods.savePreferredLanguage(this, getResources().getString(R.string.lang_english));
-        }else if(teluguLanguage.isChecked()){
-            GlobalMethods.savePreferredLanguage(this, getResources().getString(R.string.lang_telugu));
-        }
         goToLaunchScreen();
     }
 
@@ -77,7 +70,7 @@ public class ChooseLanguageActivity extends BaseActivity {
     }
 
     private void prepopulateTheSelection(){
-        if(GlobalMethods.getPreferredLanguage(this).equals(getResources().getString(R.string.lang_english))){
+        if(GlobalMethods.getPreferredLanguage().equals(getResources().getString(R.string.lang_english))){
             englishLanguage.setChecked(true);
         }else{
             teluguLanguage.setChecked(true);

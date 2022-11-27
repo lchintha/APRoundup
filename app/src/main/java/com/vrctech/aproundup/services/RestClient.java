@@ -91,22 +91,8 @@ public class RestClient {
         });
     }
 
-    public static void getAvailableDateForEpaper(String code, RestCallback callback){
-        HttpClient.getClient().newCall(getRequest(Globals.PAPER_DATES + code)).enqueue(new Callback() {
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                callback.onFailure();
-            }
-
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) {
-                callback.result(getJSONObjectFromResponse(response));
-            }
-        });
-    }
-
-    public static void getEPaperKeys(String paperCode, RestCallback callback){
-        HttpClient.getClient().newCall(getRequest(Globals.PAPER_KEYS + paperCode)).enqueue(new Callback() {
+    public static void getAvailableDateForEpaper(RestCallback callback){
+        HttpClient.getClient().newCall(getRequest(Globals.LATEST_DATE)).enqueue(new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
                 callback.onFailure();

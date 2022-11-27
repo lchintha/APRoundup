@@ -5,10 +5,10 @@
 
     <group
         android:checkableBehavior="single">
-        <item
+        <!--<item
             android:icon="@drawable/ic_covid"
             android:id="@+id/covid"
-            android:title="@string/covid_19" />
+            android:title="@string/covid_19" />-->
         <item
             android:icon="@drawable/ic_news"
             android:id="@+id/newsPapers"
@@ -32,10 +32,10 @@
         <menu>
             <group
                 android:checkableBehavior="single">
-                <item
+                <!--<item
                     android:id="@+id/settings"
                     android:icon="@drawable/ic_settings"
-                    android:title="@string/settings" />
+                    android:title="@string/settings" />-->
                 <item
                     android:id="@+id/rateUs"
                     android:icon="@drawable/ic_rate_review"
