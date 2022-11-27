@@ -133,8 +133,8 @@ public class EpaperActivity extends AppCompatActivity implements PaperLoadImpl{
     private File getCurrentFilePath(){
         String file = getFilesDir().getAbsolutePath()
                 .concat("/" + PDFPaperDownloader.EPAPER + "/")
-                .concat(getPageName())
-                .concat(".pdf");
+                .concat(getPageName());
+        Log.d("FILE_PATH", file);
         return new File(file);
     }
 
