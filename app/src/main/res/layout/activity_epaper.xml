@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activities.epaper.EpaperActivity"
     android:background="@color/activityBackground">
 
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="0%"
+            android:text="@string/progress"
             android:textColor="@color/black"
             android:textSize="25sp"
             android:id="@+id/percentage"/>
@@ -58,8 +58,9 @@
             android:layout_marginStart="15dp"
             android:layout_centerVertical="true"
             android:elevation="10dp"
-            android:tint="@color/white"
+            app:tint="@color/white"
             android:padding="5dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:onClick="previousPaper"/>
 
         <TextView
@@ -81,8 +82,9 @@
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
             android:elevation="10dp"
-            android:tint="@color/white"
+            app:tint="@color/white"
             android:padding="5dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:onClick="nextPaper"/>
 
     </RelativeLayout>
