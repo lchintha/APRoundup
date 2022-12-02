@@ -17,15 +17,17 @@ public class PDFPaperDownloader extends AsyncTask<String, String, String>{
     static String EPAPER = "Epaper";
 
     private final PaperLoadImpl paperLoad;
+    private final int pageNumber;
 
-    PDFPaperDownloader(PaperLoadImpl paperLoad) {
+    PDFPaperDownloader(PaperLoadImpl paperLoad, int pageNumber) {
         this.paperLoad = paperLoad;
+        this.pageNumber = pageNumber;
     }
 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        paperLoad.onPaperDownloadStart();
+        paperLoad.onPageDownloadStart(pageNumber);
     }
 
     @Override
@@ -75,12 +77,12 @@ public class PDFPaperDownloader extends AsyncTask<String, String, String>{
     @Override
     protected void onProgressUpdate(String... values) {
         super.onProgressUpdate(values);
-        paperLoad.onPaperDownloadProgress(Integer.parseInt(values[0]));
+        paperLoad.onPageDownloadProgress(Integer.parseInt(values[0]));
     }
 
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
-        paperLoad.onPaperDownloadFinish();
+        paperLoad.onPageDownloadFinish(pageNumber);
     }
 }

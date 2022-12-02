@@ -32,7 +32,7 @@ public class EpaperActivity extends AppCompatActivity implements PaperLoadImpl{
     private ArrayList<String> pageNumbers;
     private String originalDate;
 
-    private int currentPaper = 0;
+    private int currentPage = 0;
 
     private PDFView paper;
     private RelativeLayout progressLayout;
@@ -61,7 +61,7 @@ public class EpaperActivity extends AppCompatActivity implements PaperLoadImpl{
         originalDate = intent.getStringExtra(ORIGINAL_DATE);
 
         setPageCount();
-        showEPaper();
+        showPaper();
     }
 
     private void setStatusBarColor(){
@@ -81,88 +81,101 @@ public class EpaperActivity extends AppCompatActivity implements PaperLoadImpl{
         next = findViewById(R.id.next);
     }
 
-    private void showEPaper(){
-        if(getCurrentFilePath().exists()){
+    private void showPaper(){
+        if(getPagePath(currentPage).exists()){
             Log.d("TAG", "DISPLAYING");
-            displayPaper();
+            displayPage();
+            downloadNextPage();
         }else {
             Log.d("TAG", "DOWNLOADING");
-            downloadPaper();
+            downloadPage(currentPage);
         }
     }
 
-    private void downloadPaper(){
-        String key = pageNumbers.get(currentPaper);
+    private void downloadPage(int pageNumber){
+        String key = pageNumbers.get(pageNumber);
         String url = String.format(Globals.EPAPER, originalDate, paperCode, key);
         Log.d("SERVICE_REQUEST", url);
-        new PDFPaperDownloader(this).execute(url, getPageName());
+        new PDFPaperDownloader(this, pageNumber).execute(url, getPageName(pageNumber));
     }
 
-    private String getPageName(){
-        return originalDate + "_" + paperCode + "_" + pageNumbers.get(currentPaper) + ".pdf";
+    private void downloadNextPage(){
+        if(currentPage + 1 < pageNumbers.size()) {
+            if(!getPagePath(currentPage + 1).exists()){
+                downloadPage(currentPage + 1);
+            }
+        }
+    }
+
+    private String getPageName(int pageNumber){
+        return originalDate + "_" + paperCode + "_" + pageNumbers.get(pageNumber) + ".pdf";
     }
 
     @Override
-    public void onPaperDownloadStart() {
-        paper.setVisibility(View.GONE);
-        progressLayout.setVisibility(View.VISIBLE);
-        percentage.setText("0%");
-        progress.setProgress(0);
+    public void onPageDownloadStart(int pageNumber) {
+        if(pageNumber == currentPage) {
+            paper.setVisibility(View.GONE);
+            progressLayout.setVisibility(View.VISIBLE);
+            percentage.setText("0%");
+            progress.setProgress(0);
+        }
     }
 
     @Override
-    public void onPaperDownloadProgress(int percent) {
+    public void onPageDownloadProgress(int percent) {
         progress.setProgress(percent);
         percentage.setText(String.format(Locale.ENGLISH, "%d%%", percent));
     }
 
     @Override
-    public void onPaperDownloadFinish() {
-        progressLayout.setVisibility(View.GONE);
-        displayPaper();
+    public void onPageDownloadFinish(int pageNumber) {
+        if(pageNumber == currentPage) {
+            progressLayout.setVisibility(View.GONE);
+            showPaper();
+        }
     }
 
-    private void displayPaper(){
+    private void displayPage(){
         paper.setMidZoom(3.5f);
         paper.setMaxZoom(7.0f);
-        paper.fromFile(getCurrentFilePath())
+        paper.fromFile(getPagePath(currentPage))
                 .load();
         paper.setVisibility(View.VISIBLE);
     }
 
-    private File getCurrentFilePath(){
+    private File getPagePath(int pageNumber){
         String file = getFilesDir().getAbsolutePath()
                 .concat("/" + PDFPaperDownloader.EPAPER + "/")
-                .concat(getPageName());
+                .concat(getPageName(pageNumber));
         Log.d("FILE_PATH", file);
         return new File(file);
     }
 
     private void setPageCount(){
-        pages.setText(String.format(Locale.ENGLISH, "%d/%d", currentPaper + 1, pageNumbers.size()));
+        pages.setText(String.format(Locale.ENGLISH, "%d/%d", currentPage + 1, pageNumbers.size()));
     }
 
     public void nextPaper(View view){
         if(progressLayout.getVisibility() != View.VISIBLE) {
             previous.setVisibility(View.VISIBLE);
-            currentPaper += 1;
-            if (currentPaper == pageNumbers.size() - 1) {
+            currentPage += 1;
+            if (currentPage == pageNumbers.size() - 1) {
                 view.setVisibility(View.GONE);
             }
             setPageCount();
-            showEPaper();
+            showPaper();
         }
     }
 
     public void previousPaper(View view){
         if(progressLayout.getVisibility() != View.VISIBLE) {
             next.setVisibility(View.VISIBLE);
-            currentPaper -= 1;
-            if (currentPaper == 0) {
+            currentPage -= 1;
+            if (currentPage == 0) {
                 view.setVisibility(View.GONE);
             }
             setPageCount();
-            showEPaper();
+            showPaper();
         }
     }
 }

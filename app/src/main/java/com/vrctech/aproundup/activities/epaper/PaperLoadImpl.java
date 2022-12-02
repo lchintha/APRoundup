@@ -2,8 +2,8 @@ package com.vrctech.aproundup.activities.epaper;
 
 public interface PaperLoadImpl {
 
-    void onPaperDownloadStart();
-    void onPaperDownloadProgress(int progress);
-    void onPaperDownloadFinish();
+    void onPageDownloadStart(int pageNumber);
+    void onPageDownloadProgress(int progress);
+    void onPageDownloadFinish(int pageNumber);
 
 }
